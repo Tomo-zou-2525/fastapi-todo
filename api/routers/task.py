@@ -1,11 +1,18 @@
+from typing import List
+
 from fastapi import APIRouter
+
+import api.schemas.task as task_schema
 
 router = APIRouter()
 
 # Taksのリスト閲覧
-@router.get("/tasks")
+# @router.get("/tasks")
+# async def list_tasks():
+#     pass
+@router.get("/tasks", response_model=List[task_schema.Task])
 async def list_tasks():
-    pass
+    return [task_schema.Task(id=1, title="1つ目のTODOタスク")]
 
 # タスクの追加
 @router.post("/tasks")
