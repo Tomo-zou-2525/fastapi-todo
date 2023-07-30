@@ -3,11 +3,11 @@ from fastapi import APIRouter
 router = APIRouter()
 
 # Taksの実行フラグOn
-@router.get("/tasks/{task_id}/done")
+@router.put("/tasks/{task_id}/done", response_model=None)
 async def mark_task_as_done():
-    pass
+    return
 
 # タスクの実行フラグOff
-@router.post("/tasks/{task_id}/done")
+@router.delete("/tasks/{task_id}/done", response_model=None)
 async def unmark_task_as_done():
-    pass
+    return
