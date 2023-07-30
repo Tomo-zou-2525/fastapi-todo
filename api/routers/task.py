@@ -9,7 +9,7 @@ async def list_tasks():
 
 # タスクの追加
 @router.post("/tasks")
-async def create_tasks():
+async def create_task():
     pass
 
 # タスクの更新
