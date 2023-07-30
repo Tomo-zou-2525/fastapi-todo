@@ -7,3 +7,5 @@ class Task(BaseModel):
     id: int
     title: Optional[str] = Field(None, example="Unko")
     done: bool = Field(False, description="完了フラグ")
+
+# develop push test
